@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Even Test Page</title>
+    <style>
+        .shadow {
+            box-shadow: grey 10px 10px 0px;
+            width: 200px;
+            height: 80px;
+            background-color: white;
+        }
+
+        .noShadow {
+            border-radius: 40%;
+            height: 120px;
+            width: 300px;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='h1' onclick='addShadow()'></h1>
+    <script>
+        let h1 = document.getElementById('h1');
+        h1.innerText = 'Edge Tech';
+        //h1.style.backgroundColor = 'lightblue';
+        h1.style.color = 'red';
+        h1.className = 'noShadow';
+
+        let body = document.body;
+        body.style.backgroundColor = 'lightyellow'
+
+        function addShadow() {
+            if (h1.classList.contains('shadow'))
+                h1.className = 'noShadow';
+            else
+                h1.className = 'shadow';
+        }
+    </script>
+</body>
+
+</html>
